@@ -1,0 +1,48 @@
+﻿@model HobbyLobbySBView.ViewModels.IndexFitLocationViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Fit Location</h2>
+
+@using (Html.BeginForm("Result", "FitLocation"))
+{
+    
+        <div class="form-group">
+            @Html.LabelFor(m => m.BoxL)
+            @Html.TextBoxFor(m => m.BoxL, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.BoxW)
+            @Html.TextBoxFor(m => m.BoxW, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.BoxH)
+            @Html.TextBoxFor(m => m.BoxH, new { @class = "form-control" })
+        </div>
+    
+    
+        <div class="form-group">
+            @Html.LabelFor(m => m.LocL)
+            @Html.TextBoxFor(m => m.LocL, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.LocW)
+            @Html.TextBoxFor(m => m.LocW, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.LocH)
+            @Html.TextBoxFor(m => m.LocH, new { @class = "form-control" })
+        </div>
+   
+
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Calculate</button>
+
+
+}
